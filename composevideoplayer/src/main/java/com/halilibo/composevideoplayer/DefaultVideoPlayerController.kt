@@ -25,6 +25,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 import java.util.concurrent.atomic.AtomicBoolean
 
+@OptIn(InternalCoroutinesApi::class)
 internal class DefaultVideoPlayerController(
     private val context: Context,
     private val initialState: VideoPlayerState,

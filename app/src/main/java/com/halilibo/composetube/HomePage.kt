@@ -10,8 +10,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import com.halilibo.composetube.model.Video
-import dev.chrisbanes.accompanist.coil.CoilImage
 
 @Composable
 fun HomePage(
@@ -35,8 +35,8 @@ fun HomePage(
                     }
                     .padding(horizontal = 16.dp, vertical = 8.dp)
             ) {
-                CoilImage(
-                    data = video.thumb,
+                AsyncImage(
+                    video.thumb,
                     contentDescription = video.title,
                     modifier = Modifier.size(64.dp)
                 )
