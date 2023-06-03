@@ -73,6 +73,7 @@ internal class DefaultVideoPlayerController(
     private var updateDurationAndPositionJob: Job? = null
     private val playerEventListener = object : Player.EventListener {
 
+        @Deprecated("Deprecated in Java")
         override fun onPlayerStateChanged(playWhenReady: Boolean, playbackState: Int) {
             if(PlaybackState.of(playbackState) == PlaybackState.READY) {
                 initialStateRunner = initialStateRunner?.let {
