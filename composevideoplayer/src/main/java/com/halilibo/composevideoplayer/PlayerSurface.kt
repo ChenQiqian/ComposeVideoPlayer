@@ -3,16 +3,16 @@ package com.halilibo.composevideoplayer
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.viewinterop.AndroidView
-import com.google.android.exoplayer2.ui.PlayerView
+import com.google.android.exoplayer2.ui.StyledPlayerView
 
 @Composable
 fun PlayerSurface(
     modifier: Modifier = Modifier,
-    onPlayerViewAvailable: (PlayerView) -> Unit = {}
+    onPlayerViewAvailable: (StyledPlayerView) -> Unit = {}
 ) {
     AndroidView(
         factory = { context ->
-            PlayerView(context).apply {
+            StyledPlayerView(context).apply {
                 useController = false
                 onPlayerViewAvailable(this)
             }
